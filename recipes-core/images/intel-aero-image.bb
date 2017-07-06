@@ -73,6 +73,11 @@ IMAGE_INSTALL += "notify-led"
 # repo metadata
 IMAGE_INSTALL += "intel-aero-repo"
 
+# LTE MODEM
+IMAGE_INSTALL += "glibc-gconvs glibc-utils glibc-gconv-iso8859-1 modemmanager \
+	opkg opkg-utils rpm icon-naming-utils libtool libndp libnl libinput \
+	libxdmcp autostart-modem modem-enable \
+"
 addtask create_link after do_rootfs before do_image
 
 do_create_link() {
